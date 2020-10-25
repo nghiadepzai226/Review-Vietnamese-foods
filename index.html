@@ -5,30 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">  
     <link
         href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira"
         rel="stylesheet">
+    
+
 </head>
 
 <body>
-    <div class="topnav">
+    <div  class="topnav">
         <a class="active" href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </div>
     <div id="home" class="hero">
         <div class="welcome">
-            Welcome to
-            <br>
-            Vietnamese Food
+            <p id="animate1">Welcome to
+                <br> </p>
+            <p id="animate2">Vietnamese Food</p>
             <a href="#Menu">Let's find out</a>
         </div>
 
     </div>
 
 
-    <div id="Menu" class="content">
+    <div data-aos="fade-up"  id="Menu" class="content">
         <h2>Here are some traditional food in VietNam</h2>
         <p class="pho">Top 1: "Phở"</p>
         <p><img id="pho" src="./pho.jpg" alt="Pho"></p>
@@ -44,7 +47,7 @@
         </p>
         <button onclick="myFunction()" id="myBtn">Read more</button>
     </div>
-    <div class="content2">
+    <div data-aos="fade-down"  class="content2">
         <p class="buncha">Top 2: "Bún chả"</p>
         <img src="./buncha2.jpg" alt="buncha">
         <p>Không có một mốc chính xác để ghi lại lịch sử ra đời của bún chả, cũng chưa biết món ăn này được sáng tạo bởi
@@ -61,7 +64,7 @@
         </p>
         <button onclick="myFunction2()" id="myBtn2">Read more</button>
     </div>
-    <div class="content3">
+    <div data-aos="fade-left" class="content3">
         <p class="bundau">Top 3: "Bún đậu"</p>
         <img src="./bundau.jpg" alt="bundau">
         <p>Bún đậu mắm tôm – ngay từ cái tên đã dễ dàng cho du khách biết được sự kết hợp hài hòa giữa bún đậu và mắm
@@ -76,7 +79,7 @@
         </p>
         <button onclick="myFunction3()" id="myBtn3">Read more</button>
     </div>
-    <div class="content4">
+    <div data-aos="fade-right" class="content4">
         <p class="bunrieu">Top 4: "Bún riêu"</p>
         <img src="./bun rieu.jpg" alt="bunrieu">
         <p>Bún riêu cua là món ăn dân dã, có vị chua thanh, ăn mùa hè rất mát nên được nhiều người ưa thích, kể cả khách
@@ -89,12 +92,11 @@
         </p>
         <button onclick="myFunction4()" id="myBtn4">Read more</button>
     </div>
-    <h3>And many more delicious food in Viet Nam are waiting for you
-        <br>
-        You can find out at: <a
-            href="https://benhvienworldwide.vn/en/vietnamese-traditional-food-20-must-eat-dishes-in-saigon/">https://benhvienworldwide.vn/en/vietnamese-traditional-food-20-must-eat-dishes-in-saigon/</a>
+    <h3 data-aos="zoom-in">And many more delicious food in Viet Nam are waiting for you
+        <button><a
+            href="https://benhvienworldwide.vn/en/vietnamese-traditional-food-20-must-eat-dishes-in-saigon/"  target="_blank">Click here to see more</a></button> 
     </h3>
-    <div id="about">
+    <div data-aos="fade-right" id="about">
         <h4>ABOUT</h4>
         <p>Author of the website: Đoàn Trung Nghĩa</p>
         <p>"I'm come from Ha Noi in VietNam,I will try my best to bring the best website for you!"<br><br><br><br><br>
@@ -102,15 +104,15 @@
         <p>This website was created to show you about Vietnamese traditional foods</p>
         <img src="./vietnam.jpg" alt="">
     </div>
-    <div id="contact" class="container">
-        <h5>CONTACT</h5>
+    <div  id="contact" class="container">
+        <h5 data-aos="fade-right">CONTACT</h5>
 
-        <form id="contact-form" action="">
+        <form data-aos="fade-left" id="contact-form" action="">
             <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." value="">
 
             <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." value="">
 
             <label for="country">Country</label>
             <select id="country" name="country">
@@ -120,12 +122,13 @@
             </select>
 
             <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <textarea value="" id="subject" name="subject" placeholder="Write something.."
+                style="height:200px"></textarea>
 
             <input type="submit" value="Submit">
         </form>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./index.js"></script>
 </body>
 

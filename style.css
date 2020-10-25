@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Itim', cursive;
+  
 }
 
 .topnav {
@@ -10,7 +11,7 @@
   background-color: rgb(104, 104, 104);
   overflow: hidden;
   opacity: 0.5;
-  z-index: 0;
+  z-index: 5;
   margin: auto;
   top: 0;
   left: 0;
@@ -26,7 +27,13 @@
   text-decoration: none;
   font-size: 17px;
   font-family: 'Itim', cursive;
+  animation-name: topnav;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
+
+
+
 
 .topnav a:hover {
   background-color: #ddd;
@@ -56,18 +63,46 @@
   background-size: cover;
   display: flex;
   flex-direction: column;
+  animation-name: img;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  
 }
+
 
 .welcome {
   flex: 1;
   color: red;
   font-size: 90px;
   font-family: "Patrick Hand", cursive;
-  text-align: center;
+  text-align: left;
   padding-top: 20px;
+  
+}
+#animate1 {
+  position: relative;
+  animation-name: move;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes move {
+  from {left: 0;}
+  to{left: 430px;}
+}
+#animate2 {
+  position: relative;
+  animation-name: move2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+ margin-right: 0px;
+}
+@keyframes move2 {
+  from {left: 0;}
+  to {left: 350px;}
 }
 
 .welcome a {
+  text-align: center;
   display: block;
   margin: 0 auto;
   text-decoration: none;
@@ -77,6 +112,14 @@
   color: rgb(255, 255, 255);
   background-color: rgba(0, 0, 0, 0.63);
   padding: 10px;
+  animation-name: findOut;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+@keyframes findOut {
+  from{top: 500px;}
+  to {top:50px;}
 }
 
 .welcome a:hover {
@@ -160,7 +203,16 @@
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 30px; 
+}
+h3 button {
+  width: 200px;
+  height: 50px;
+}
+button a {
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Itim', cursive;
 }
 
 #about {
@@ -186,7 +238,7 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-  background-color: #e61109;
+  background-color: #09e61b;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -208,6 +260,5 @@ h5 {
   text-align: center;
 }
 #contact{
-  background-color: #45198d;
-
+  background-color: #b9b9b9;
 }
